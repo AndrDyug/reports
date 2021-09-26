@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="scripts/script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <script src='scripts/main.js'></script>  <!--jQuery-->
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Report-page</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="container">
+            <p class="title">Звіти з лабораторних робіт</p> <br>
+            <p class="title">з дисципліни «Основи Front-end та Backend розробок»</p>
+            <br>
+            <p>Роботу виконали студенти групи <b>ІА-93</b> Візняк Максим та Дюг Андрій</p>
+         </div>
+      </header>
+      <nav>
+         <div class="nav-element"><a href="C:\Users\User\Desktop\FrontEnd\KPIzza\index.html">Лабораторна 1</a></div>
+         <div class="nav-element"><a href="../lab2/">Лабораторна 2</a></div>
+         <div class="nav-element"><a href="../lab3/">Лабораторна 3</a></div>
+         <div class="nav-element"><a href="../lab4/">Лабораторна 4</a></div>
+	      <div class="nav-element"><a href="../lab5/">Лабораторна 5</a></div>
+         <div class="nav-element"><a href="../lab6/">Лабораторна 6</a></div>
+         <div class="nav-element"><a href="../lab7/">Лабораторна 7</a></div>
+         <div class="nav-element hidden"><a href="../">Лабораторна 8</a></div>
+         <div class="nav-element hidden"><a href="../">Лабораторна 9</a></div>
+      </nav>
+      <section>
+         <div class="menu">
+            <div class="menu-item" onclick="toggle('tab-1')">Опис предметного середовища</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Тема лабораторної роботи №1</div>
+            <div class="menu-item" onclick="toggle('tab-3')">HTML-код таблиць</div>
+            <div class="menu-item" onclick="toggle('tab-4')">HTML-код форми</div>
+            <div class="menu-item" onclick="toggle('tab-5')">HTML-код зображення</div>
+            <div class="menu-item" onclick="toggle('total')">Висновок</div>
+
+
+            
+         </div>
+
+         <div class="content-window" id="start-window">
+               <p>Start<!--Here write any code you want to show as a report--></p>
+         </div>
+
+
+         
+         <div class="content-window" id="total">
+            <div class="text">
+               <b>Висновок</b> <br><br>
+               <p>
+                  На лабораторній роботі ми описали предметну галузь, реалізували основу нашої майбутньої веб-сторінки, відповідно до завдання, вставили форму, зображення та таблицю на наш сайт. Створили шаблон звітного HTML-документу для подальшої здачі лабораторних робіт.
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-1">
+
+            <div class="text">
+               <p> 
+                  <b>Опис предметного середовища</b> <br> <br>
+      
+                  <p>Предметна область "ОНЛАЙН-ПІЦЕРІЯ" </p>
+   <p>Дана предметна область, як і інші її аналоги, являє собою застосунок для онлайн-замовлення тих продуктів харчування, які надає компанія-замовник (в нашому варіанті - піца).</p>
+   <p>Функціональні вимоги до програми:</p>
+   <ul>
+      <li>Незареєстрований користувач повинен мати змогу зареєструватися</li>
+      <li>Користувач може вибрати кілька пунктів меню</li>
+      <li>На сайті повинна бути корзина обраних товарів</li>
+   </ul>
+   <p>При вході на сайт користувач одразу потрапляє на сторінку, на якій представлено список товарів, та їх ціну. Незареєстрований користувач може тільки ознайомитись із цими характеристиками товару. Усі інші дії, а саме: обрання товару в корзину і покупка його можлтва тільки в разі входу в аккаунт користувача</p>
+   
+            </div>
+         </div>
+         <div class="content-window" id="tab-2">
+            <div class="text">
+                  <b>Тема та мета лабораторної роботи №1</b> <br> <br>
+
+              <p> Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОГО ГАЛУЗІ.
+               РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, ФОРМАМИ в HTML-ДОКУМЕНТІ.</p>
+               <br>
+               <p>Мета: придбати практичні навички роботи  з HTML-документом, таблицями,формами, зображеннями, посиланнями.
+               Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.</p>
+
+            </div>
+         </div>
+         <div class="content-window" id="tab-3">
+            <div class="text">
+               <b>HTML-код таблиць</b> <br><br>
+                  <img src="./../Photo\2.png">
+                  <img src="./../Photo\3.png">
+                  <img src="./../Photo\4.png">
+                  <img src="./../Photo\5.png">
+            </div>
+         </div>
+         <div class="content-window" id="tab-4">
+            <div class="text">
+               <b>HTML-код форми</b> <br><br>
+                  <img src="./../Photo\1.png">
+            </div>
+         </div>
+         <div class="content-window" id="tab-5">
+            <div class="text">
+               <b>HTML-код зображення</b> <br><br>
+                  <img src="./../Photo\6.png">
+            </div>
+         </div>
+         
+
+      </section>
+   </div>
+   <footer>
+      <div><a href="../index.html">2021 рік</a></div>
+   </footer>
+</body>
+
+</html>
