@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="scripts/script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <script src='scripts/main.js'></script>  <!--jQuery-->
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Report-page</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="container">
+            <p class="title">Звіти з лабораторних робіт</p> <br>
+            <p class="title">з дисципліни «Основи розробки програмного забезпечення на платформі .NET»</p>
+            <br>
+            <p>Роботу виконали студенти групи <b>ІА-93</b></p>
+         </div>
+      </header>
+      <nav>
+         <div class="nav-element"><a href="../lab1/index.html">Лабораторна 1</a></div>
+         <div class="nav-element"><a href="../lab2/index.html">Лабораторна 2</a></div>
+         <div class="nav-element"><a href="index.html">Лабораторна 3</a></div>
+         <div class="nav-element"><a href="../lab4/index.html">Лабораторна 4</a></div>
+	      <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
+         <div class="nav-element"><a href="../lab6/index.html">Лабораторна 6</a></div>
+         <div class="nav-element"><a href="../lab7/index.html">Лабораторна 7</a></div>
+         <div class="nav-element hidden"><a href="../lab8/index.html">Лабораторна 8</a></div>
+         <div class="nav-element hidden"><a href="../lab9/index.html">Лабораторна 9</a></div>
+      </nav>
+      <section>
+         <div class="menu">
+            <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №3</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Місце розташування проекту</div>
+            <div class="menu-item" onclick="toggle('total')">Висновок</div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Проектування структури ПЗ</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-1')">UML-діаграма класів</div>
+               </div>
+            </div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Кодування ПЗ (програмування)</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-2')" style="display: none;">Класи з описом властивостей закритих полів</div>
+                  <div class="drop-bar" onclick="toggle('drop-3')">Файлова структура проекту</div>
+                  <div class="drop-bar" onclick="toggle('drop-4')">Код всіх файлів та результат програми</div>
+               </div>
+            </div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Впровадження ПЗ</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-5')">Папка з проектом</div>
+                  <div class="drop-bar" onclick="toggle('drop-6')">Запуск .exe файлу</div>
+               </div>
+            </div>
+
+            
+         </div>
+
+         <div class="content-window" id="start-window">
+               <p>Start<!--Here write any code you want to show as a report--></p>
+         </div>
+
+
+         
+         <div class="content-window" id="total">
+            <div class="text">
+               <p>
+                  На даній лабораторній роботі ми здійснили введення та виведення даних закритих полів класів, застосовуючи методи-властивості. Також ми визначили основні переваги методів-властивостей: <br> <br>
+•  забезпечується більш раціональний та природній доступ до внутрішніх змінних класу; <br> <br>
+•  в коді аксесорів можна реалізовувати різного роду перевірки на допустимість значень внутрішніх змінних класу; <br> <br>
+•  гнучкість у правах доступа до внутрішньої змінної: відсутність аксесора set дозволяє реалізувати доступ “тільки для читання” для частини внутрішніх даних класу. Це, в свою чергу, унеможливлює випадкову зміну цих даних. 
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-1">
+
+            <div class="text">
+               <p> 
+                  <b>Тема та постановка задачі:</b> <br> <br>
+      
+                  ВИКОРИСТАННЯ ВЛАСТИВОСТЕЙ.  АВТОМАТИЧНІ ВЛАСТИВОСТІ. СКОРОЧЕНИЙ ЗАПИС ВЛАСТИВОСТЕЙ <br> <br>
+                  
+                  Мета: Здійснити введення та виведення даних закритих полів класів, застосовуючі методи-властивості.<br> <br>
+                  
+                  Постановка задачі: <br> <br>
+      
+                     1. Доповнити програмну реалізацію класів методами-властивостями класів, введення та виведення даних закритих полів класів<br> <br>
+                     2.	Протестувати програму, шляхом запуску програми, введенням та виведенням значень закритих полів.<br>
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-2">
+            <div class="text">
+               <p class="download"> 
+                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a>
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="drop-1">
+            <div class="text">
+              <img src="sources/img/uml-diag.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-2">
+            <div class="text">
+               <p>Coming soon...</p>
+            </div>
+         </div>
+         <div class="content-window" id="drop-3">
+            <div class="text">
+              <img src="sources/img/file-strctr.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-4">
+            <div class="text">
+               <p>Cabinet.cs</p>
+               <pre>
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Cabinet : ICloneable{
+
+		private int _area;
+		//todo refractor to class, ato takoi tresh, sho kapets
+		private int _equipment;
+		//WTF?
+		private string _medicalStaff;
+		private string _name;
+		private int _number;
+		//todo as enum\class...
+		private bool _status;
+
+
+		public int Area {
+			get { return _area; }
+			set { _area = value; }
+		}
+
+		public int Equipment {
+			get { return _equipment; }
+			set { _equipment = value; }
+		}
+
+		public string MedicalStaff {
+			get { return _medicalStaff; }
+			set { _medicalStaff = value; }
+		}
+
+		public string Name {
+			get { return _name; }
+			set { _name = value; }
+		}
+
+		public int Number {
+			get { return _number; }
+			set { _number = value; }
+		}
+
+		public bool Status {
+			get { return _status; }
+			set { _status = value; }
+		}
+
+		public Cabinet(int area, int equipment, string staff, string name, int number, bool status) {
+			Area = area;
+			Equipment = equipment;
+			MedicalStaff = staff;
+			Name = name;
+			Number = number;
+			Status = status;
+		}
+
+		public object Clone() {
+			throw new NotImplementedException();
+		}
+
+		public void AddInfo(){
+			throw new NotImplementedException();
+		}
+
+		public void Change() {
+			throw new NotImplementedException();
+		}
+
+		public void PrintInfo() {
+			throw new NotImplementedException();
+		}
+	}
+}
+
+               </pre>
+               <p>Clinic.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Clinic {
+
+		public static Registry Registry { get; set; }
+		public static List<MedicalStaff> MedicalStaff { get; set; }
+		public static List<Cabinet> Cabinets { get; set; }
+		public static List<Patient> Patients { get; set; }
+
+
+		public Clinic() {
+			Init();
+			Console.WriteLine("Ctor clinic was invoked");
+		}
+
+		public void Init(){
+			Registry = new Registry(0, 0);
+			MedicalStaff = new List<MedicalStaff>();
+			Cabinets = new List<Cabinet>();
+			Patients = new List<Patient>();
+			CreateTempPerson("Name", "Surname", 20, DateTime.Now);
+			CreateTempStaff();
+			CreateTempCabinet();
+		}
+
+		public void CreateTempPerson(string Name, string Surname, int Age, DateTime time) {
+			var person1 = new Person(new Person(Name, Surname, Age, time));
+			var person2 = new Person();
+			var person3 = new Person(Name, Surname, Age, time);
+			Console.WriteLine("Created 3 person");
+			CreateTempPatient(Name, Surname, Age, time);
+		}
+
+		public void CreateTempPatient(string Name, string Surname, int Age, DateTime time) {
+			var patient1 = new Patient(new Person(Name, Surname, Age, time), "Compl-1");
+			var patient2 = new Patient(new Person(Name, Surname, Age, time), "Compl-2");
+			var patient3 = new Patient(new Person(Name, Surname, Age, time), "Compl-3");
+			Patients.Add(patient1);
+			Patients.Add(patient2);
+			Patients.Add(patient3);
+			Console.WriteLine("Created 3 patient");
+		}
+
+		public void CreateTempStaff(){
+			MedicalStaff staff1 = new MedicalStaff(0, 0, "name-1", 0, "doc", "rev-1", 5);
+			MedicalStaff staff2 = new MedicalStaff(0, 0, "name-2", 1, "doc", "rev-2", 4);
+			MedicalStaff staff3 = new MedicalStaff(0, 0, "name-3", 2, "noone", "rev-3", 3);
+			MedicalStaff.Add(staff1);
+			MedicalStaff.Add(staff2);
+			MedicalStaff.Add(staff3);
+			Console.WriteLine("Created 3 staff");
+		}
+
+		public void CreateTempCabinet() {
+			Cabinet cabinet1 = new Cabinet(20, 1, "staff-1" , "name-1", 0, false);
+			Cabinet cabinet2 = new Cabinet(22, 2, "staff-2" , "name-2", 1, true);
+			Cabinet cabinet3 = new Cabinet(24, 3, "staff-3" , "name-3", 2, false);
+			Cabinets.Add(cabinet1);
+			Cabinets.Add(cabinet2);
+			Cabinets.Add(cabinet3);
+			Console.WriteLine("Created 3 Cabinet");
+		}
+	}
+}
+                 
+               </pre>
+               <p>MedicalStaff.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class MedicalStaff {
+		//todo Cabinet id??, add link
+		private int _cabinet;
+		//todo 
+		private int _medicalExperience;
+		private string _name;
+		private int _numberPlate;
+		//todo enum\class ...
+		private string _position;
+		//todo class
+		private string _reviews;
+		//Todo class blyat
+		private int _workScheldule;
+
+
+		public int Cabinet {
+			get { return _cabinet; }
+			set { _cabinet = value; }
+		}
+
+		public int MedicalExperience {
+			get { return _medicalExperience; }
+			set { _medicalExperience = value; }
+		}
+
+		public string Name {
+			get { return _name; }
+			set { _name = value; }
+		}
+
+		public int NumberPlaye {
+			get { return _numberPlate; }
+			set { _numberPlate = value; }
+		}
+
+		public string Position {
+			get { return _position; }
+			set { _position = value; }
+		}
+
+		public string Reviews {
+			get { return _reviews; }
+			set { _reviews = value; }
+		}
+
+		public int WorkScheldule {
+			get { return _workScheldule; }
+			set { _workScheldule = value; }
+		}
+
+		public MedicalStaff(int cabinet, int exp, string name, 
+		int plate, string position, string rev, int schedule) {
+			Cabinet = cabinet;
+			MedicalExperience = exp;
+			Name = name;
+			NumberPlaye = plate;
+			Position = position;
+			Reviews = rev;
+			WorkScheldule = schedule;
+		}
+
+		public void GetInfo(){
+			throw new NotImplementedException();
+		}
+
+		public void PrintInfo(){
+			throw new NotImplementedException();
+		}
+
+		public void PrintReviews(){
+			throw new NotImplementedException();
+		}
+	}
+}
+
+               </pre>
+               <p>Patient.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Patient : Person {
+
+		private string _comlaints;
+
+		public string Comlaints {
+			get { return _comlaints; }
+			set { _comlaints = value; }
+		}
+
+		public Patient(string name, string surname, int age, DateTime date, string compl) 
+		: base(Name: name, Surname: surname, Age: age, Birthday: date){
+			Comlaints = compl;
+		}
+
+		public Patient(Person person, string compl)
+		: base(person) {
+			Comlaints = compl;
+		}
+
+		public void Recording(){
+			throw new NotFiniteNumberException();
+		}
+
+	}
+}
+               </pre>
+               <p>Person.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Person {
+
+		private string _name;
+		private string _code;
+		//Todo check for exist code from db\collection
+		public string Code { get { return _code; } private set { _code = value; } }
+		private DateTime _birthday;
+		private int _age;
+		private string _surname;
+
+		public string Name {
+			get { return _name; }
+			set { _name = value; }
+		}
+
+		public string Surname {
+			get { return _surname; }
+			set { _surname = value; }
+		}
+
+		public int Age {
+			get { return _age; }
+			set { _age = value; }
+		}
+
+		public DateTime Birthday {
+			get { return _birthday; }
+			set { _birthday = value; }
+		}
+
+		public Person() {
+			Code = new TicketGenerator().RandomString();
+		}
+
+		public Person(string Name, string Surname, int Age, DateTime Birthday) {
+			this.Name = Name;
+			this.Surname = Surname;
+			this.Age = Age;
+			this.Birthday = Birthday;
+			Code = new TicketGenerator().RandomString();
+		}
+
+		public Person(Person person) {
+			Name = person.Name;
+			Surname = person.Surname;
+			Age = person.Age;
+			Birthday = person.Birthday;
+		}
+
+		// override object.Equals
+		public override bool Equals(object obj) {
+			if (obj == null || GetType() != obj.GetType()) {
+				return false;
+			}
+			return (obj as Person).Code.Equals(Code);
+		}
+
+		public override int GetHashCode() {
+			HashCode hash = new HashCode();
+			hash.Add(Code);
+			return hash.ToHashCode();
+		}
+	}
+}
+               </pre>
+               <p>Profession.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Profession {
+		//todo
+		public enum Prof{
+			Medsister = 0,
+			Terapeft,
+			Doctor,
+		}
+	}
+}
+
+               </pre>
+               <p>Programm.cs</p>
+               <pre>
+using System;
+
+namespace ZooClinic {
+	class Program {
+		static void Main(string[] args) {
+			Console.WriteLine("Hello World!");
+			Clinic clinic = new Clinic();
+			Console.ReadLine();
+		}
+	}
+}
+
+               </pre>
+               <p>Registry.cs</p>
+               <pre>
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ZooClinic {
+	class Registry {
+
+		private int _number;
+		private int _workSchedule;
+
+		public int Number {
+			get { return _number; }
+			set { _number = value; }
+		}
+
+		public int WorkSchedule {
+			get { return _workSchedule; }
+			set { _workSchedule = value; }
+		}
+
+		public Registry(int number, int workSchedule) {
+			Number = number;
+			WorkSchedule = workSchedule;
+		}
+
+		public void AddToQueue(){
+			throw new NotImplementedException();
+		}
+
+		public void GetInfo() {
+			throw new NotImplementedException();
+		}
+
+		public void PrintInfo() {
+			throw new NotImplementedException();
+		}
+
+		public void PrintQueue() {
+			throw new NotImplementedException();
+		}
+
+	}
+}
+
+               </pre>
+               <p>TicketGenerator.cs</p>
+               <pre>
+using System;
+using System.Linq;
+
+namespace ZooClinic {
+	class TicketGenerator {
+		const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		const int length = 10;
+		private static readonly Random random = new Random();
+
+		public string RandomString() {
+			return new string(Enumerable.Repeat(chars, length)
+			  .Select(s => s[random.Next(s.Length)]).ToArray());
+		}
+	}
+}
+               </pre>
+            </div>
+         </div>
+         <div class="content-window" id="drop-5">
+            <div class="text">
+               <p class="download"> 
+                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a>
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="drop-6">
+            <div class="text">
+               <img src="sources/img/prog.jpg" alt="">
+            </div>
+         </div>
+      </section>
+   </div>
+   <footer>
+      <div><a href="../index.html">2021 рік</a></div>
+   </footer>
+</body>
+
+</html>

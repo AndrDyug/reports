@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="scripts/script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <script src='scripts/main.js'></script>  <!--jQuery-->
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Report-page</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="container">
+            <p class="title">Звіти з лабораторних робіт</p> <br>
+            <p class="title">з дисципліни «Основи розробки програмного забезпечення на платформі .NET»</p>
+            <br>
+            <p>Роботу виконали студенти групи <b>ІА-93</b></p>
+         </div>
+      </header>
+      <nav>
+         <div class="nav-element"><a href="../lab1/index.html">Лабораторна 1</a></div>
+         <div class="nav-element"><a href="../lab2/index.html">Лабораторна 2</a></div>
+         <div class="nav-element"><a href="../lab3/index.html">Лабораторна 3</a></div>
+         <div class="nav-element"><a href="../lab4/index.html">Лабораторна 4</a></div>
+	      <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
+         <div class="nav-element"><a href="../lab6/index.html">Лабораторна 6</a></div>
+         <div class="nav-element"><a href="../lab7/index.html">Лабораторна 7</a></div>
+         <div class="nav-element hidden"><a href="../lab8/index.html">Лабораторна 8</a></div>
+         <div class="nav-element hidden"><a href="../lab9/index.html">Лабораторна 9</a></div>
+      </nav>
+      <section>
+         <div class="menu">
+            <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №4</div>
+            <div class="menu-item" onclick="toggle('total')">Висновок</div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Проектування структури ПЗ</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-1')" style="display: none;">Таблиця класів</div>
+                  <div class="drop-bar" onclick="toggle('drop-2')">UML-діагарма класів</div>
+               </div>
+            </div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Кодування ПЗ (програмування)</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-3')">Файлова структура проекту</div>
+                  <div class="drop-bar" onclick="toggle('drop-4')">Методи перевантаження унарних операторів</div>
+                  <div class="drop-bar" onclick="toggle('drop-5')">Методи перевантаження бінарних операторів</div>
+		  <div class="drop-bar" onclick="toggle('drop-6')">Методи перевантаження логічних операторів </div>	  
+               </div>
+            </div>
+            <div class="drop-out">
+               <div class="drop-down">
+                  <p>Впровадження ПЗ</p>
+
+               </div>
+               <div class="container">
+                  <div class="drop-bar" onclick="toggle('drop-7')">Папка з проектом</div>
+                  <div class="drop-bar" onclick="toggle('drop-8')">Запуск .exe файлу</div>
+               </div>
+            </div>
+
+            
+         </div>
+
+         <div class="content-window" id="start-window">
+               <p>Start<!--Here write any code you want to show as a report--></p>
+         </div>
+
+
+         
+         <div class="content-window" id="total">
+            <div class="text">
+               <p>
+                  У даній лабораторній роботі, ми навчилися створювати реалізацію методів перевантаження унарних, бінарних, логічних операторів, операторів порівняння на платформі .NET. 
+Також ми відпрацювали матеріал перевантаження операторів та зрозуміли їх переваги.  
+
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-1">
+
+            <div class="text">
+               <p> 
+                  <b>Тема та постановка задачі:</b> <br> <br>
+      
+                  Тема: ПЕРЕВАНТАЖЕННЯ УНАРНИХ, БІНАРНИХ, ЛОГІЧНИХ ОПЕРАТОРІВ,ОПЕРАТОРІВ ПОРІВНЯННЯ <br> <br>
+                  
+                  Мета: Придбати практичні навички роботи  реалізації методів перевантаження унарних, бінарних, логічних операторів, операторів порівняння.<br> <br>
+                  
+                  Постановка задачі: <br> <br>
+      
+                     1.Доповнити програмну реалізацію класів методами для перевантаження унарних, бінарних, логічних операторів, операторів порівняння.<br>
+		     2.Протестувати програму. Зробити висновки.<br>
+		     Вказати класи та  методи перевантаження унарних, бінарних, логічних оперторів, операторів порівняння,  які реалізуються у ціх класах. Написати призначення ціх методів перевантаження операторів.
+		</p>
+            </div>
+         </div>
+         <div class="content-window" id="drop-1">
+            <div class="text">
+              <p>drop-1</p>
+            </div>
+         </div>
+         <div class="content-window" id="drop-2">
+            <div class="text">
+               <img src="sources/img/uml-diag.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-3">
+            <div class="text">
+               <img src="sources/img/file-strctr.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-4">
+            <div class="text">
+               <pre>static public Patient operator ++(Patient pat)
+		{
+			pat.Age++;
+			return pat;
+		}
+		</pre>
+		<img src="sources/img/unarniy.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-5">
+            <div class="text">
+               <pre>static public Cabinet operator ~(Cabinet cab)
+		{
+			cab.Status = !cab.Status;
+			return cab;
+		}
+		</pre>
+		<img src="sources/img/binary.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-6">
+            <div class="text">
+               <pre>// logichniy
+		static public Person operator ^(Person per1, Person per2)
+		{
+			return new Person(per1.Name, per1.Surname, per1.Age ^ per2.Age, per1.Birthday);
+
+		}
+// porivnyanya
+		static public bool operator <(MedicalStaff med1, MedicalStaff med2)
+		{
+			return med1.Cabinet < med2.Cabinet;
+		}
+
+// porivnyanya
+		static public bool operator >(MedicalStaff med1, MedicalStaff med2)
+		{
+			return med1.Cabinet > med2.Cabinet;
+		}
+		</pre>
+		<img src="sources/img/logichniy.jpg" alt="">
+		<img src="sources/img/porivniannia.jpg" alt="">
+            </div>
+         </div>
+         <div class="content-window" id="drop-7">
+            <div class="text">
+               <p class="download"> 
+                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a><br>
+	          Середовище розробки Visual Studio  
+               </p>
+            </div>
+         </div>
+	 <div class="content-window" id="drop-8">
+            <div class="text">
+                <img src="sources/img/prog.jpg" alt="">
+            </div>
+         </div>
+	 
+         
+
+      </section>
+   </div>
+   <footer>
+      <div><a href="../index.html">2021 рік</a></div>
+   </footer>
+</body>
+
+</html>
