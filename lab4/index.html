@@ -6,9 +6,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
    <script src="scripts/script.js"></script>
+   <script src="scripts/histo.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-   
-   <script src='scripts/main.js'></script>  <!--jQuery-->
+
+   <script src='scripts/main.js'></script>
+   <!--jQuery-->
 
    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
    <title>Report-page</title>
@@ -29,15 +31,17 @@
          <div class="nav-element"><a href="../lab2/index.html">Лабораторна 2</a></div>
          <div class="nav-element"><a href="../lab3/index.html">Лабораторна 3</a></div>
          <div class="nav-element"><a href="../lab4/index.html">Лабораторна 4</a></div>
-	      <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
+         <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
          <div class="nav-element"><a href="../lab6/index.html">Лабораторна 6</a></div>
          <div class="nav-element"><a href="../lab7/index.html">Лабораторна 7</a></div>
-         <div class="nav-element hidden"><a href="../lab8/index.html">Лабораторна 8</a></div>
-         <div class="nav-element hidden"><a href="../lab9/index.html">Лабораторна 9</a></div>
+         <div class="nav-element"><a href="../lab8/index.html">Лабораторна 8</a></div>
+         <div class="nav-element"><a href="../lab9/index.html">Лабораторна 9</a></div>
       </nav>
       <section>
          <div class="menu">
             <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №4</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Масиви (4 Пункт)</div>
+            <div class="menu-item" onclick="toggle('tab-3')">Виконання 6 Пункту</div>
             <div class="menu-item" onclick="toggle('total')">Висновок</div>
             <div class="drop-out">
                <div class="drop-down">
@@ -45,145 +49,233 @@
 
                </div>
                <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-1')" style="display: none;">Таблиця класів</div>
-                  <div class="drop-bar" onclick="toggle('drop-2')">UML-діагарма класів</div>
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Кодування ПЗ (програмування)</p>
+                  <div class="drop-bar" onclick="toggle('drop-1')">Схема URL</div>
+                  <div class="drop-bar" onclick="toggle('drop-2')">Обробник Подій</div>
+                  <div class="drop-bar" onclick="toggle('drop-3')">Підстановка(Entity)</div>
+                  <div class="drop-bar" onclick="toggle('drop-4')">Вставка(Тег SCRIPT)</div>
 
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-3')">Файлова структура проекту</div>
-                  <div class="drop-bar" onclick="toggle('drop-4')">Методи перевантаження унарних операторів</div>
-                  <div class="drop-bar" onclick="toggle('drop-5')">Методи перевантаження бінарних операторів</div>
-		  <div class="drop-bar" onclick="toggle('drop-6')">Методи перевантаження логічних операторів </div>	  
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Впровадження ПЗ</p>
-
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-7')">Папка з проектом</div>
-                  <div class="drop-bar" onclick="toggle('drop-8')">Запуск .exe файлу</div>
                </div>
             </div>
 
-            
          </div>
 
          <div class="content-window" id="start-window">
-               <p>Start<!--Here write any code you want to show as a report--></p>
+            <p>Start
+               <!--Here write any code you want to show as a report-->
+            </p>
          </div>
-
-
-         
          <div class="content-window" id="total">
             <div class="text">
                <p>
-                  У даній лабораторній роботі, ми навчилися створювати реалізацію методів перевантаження унарних, бінарних, логічних операторів, операторів порівняння на платформі .NET. 
-Також ми відпрацювали матеріал перевантаження операторів та зрозуміли їх переваги.  
-
+                  Отже, під час виконання цієї лабораторної роботи ми придбали практичні навички редагування інформації сайту, створення елементів, та їх заповнення використовуючи мову JavasSript                 
                </p>
             </div>
          </div>
          <div class="content-window" id="tab-1">
-
             <div class="text">
                <p> 
-                  <b>Тема та постановка задачі:</b> <br> <br>
-      
-                  Тема: ПЕРЕВАНТАЖЕННЯ УНАРНИХ, БІНАРНИХ, ЛОГІЧНИХ ОПЕРАТОРІВ,ОПЕРАТОРІВ ПОРІВНЯННЯ <br> <br>
-                  
-                  Мета: Придбати практичні навички роботи  реалізації методів перевантаження унарних, бінарних, логічних операторів, операторів порівняння.<br> <br>
-                  
-                  Постановка задачі: <br> <br>
-      
-                     1.Доповнити програмну реалізацію класів методами для перевантаження унарних, бінарних, логічних операторів, операторів порівняння.<br>
-		     2.Протестувати програму. Зробити висновки.<br>
-		     Вказати класи та  методи перевантаження унарних, бінарних, логічних оперторів, операторів порівняння,  які реалізуються у ціх класах. Написати призначення ціх методів перевантаження операторів.
-		</p>
+                  Мета: придбати практичні навички роботи маніпулювання інформаційним вмістом Web-документа засобами мови JavasSript, використання об’єктів,масивів, функцій, подій, обробників подій у сценаріях на мові JavasSript      
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-2">
+            <div class="text"> 
+               <b>Варіант 7</b> <br>
+               <img src="sources/img/arr.png">
+            </div>
+            <div class="code">
+               <code>
+                  <pre>
+--------------------------------------------------------------------------
+'use strict';
+let isActive = false;
+
+function dropDown() {
+   if(!isActive){
+   document.getElementById("drop-down-content").style.display = "block";
+   isActive = !isActive;
+   }
+   else {
+      document.getElementById("drop-down-content").style.display = "none";
+      isActive = !isActive;
+   }
+}
+
+function toggle(id){
+   let elements = document.getElementsByClassName("content-window")
+
+   for (let i = 0; i &lt elements.length; i++){
+      elements[i].style.display = "none";
+   }
+   document.getElementById(id).style.display = "flex";
+}
+function createArray(n){
+   let array = new Array(n);
+   let odd = true;
+   for (let i = 0; i &lt n; i++){
+      odd =! odd;
+      array[i] = (Math.floor(Math.random() * 100));
+      if (odd === false){
+         array[i] *=-1;
+      }
+   }
+   return array;
+}
+function selectionSort(inputArr) { 
+   let n = inputArr.length;
+       
+   for(let i = 0; i &lt n; i++) {
+       let min = i;
+       for(let j = i+1; j &lt n; j++){
+           if(inputArr[j] &lt inputArr[min]) {
+               min=j; 
+           }
+        }
+        if (min != i) {
+            // Swapping the elements
+            let tmp = inputArr[i]; 
+            inputArr[i] = inputArr[min];
+            inputArr[min] = tmp;      
+       }
+   }
+   return inputArr;
+}
+
+function printArray(length, outputId){
+   let output = document.getElementById(outputId);
+   output.innerHTML = "";
+   let unSortedArr = createArray(length);
+   print(unSortedArr);
+   let sortedArr = selectionSort(unSortedArr);
+   print(sortedArr);
+   output.innerHTML += check(sortedArr);
+   function print(arr){
+      for (let i = 0; i &lt arr.length; i++){
+         output.innerHTML += arr[i] +" "; 
+      }
+      output.innerHTML+= "&ltbr&gt";
+   }
+
+   
+}
+function check(inputArr) { 
+   let n = inputArr.length;
+   let posArr = new Array();
+   let negArr = new Array();
+       
+   for(let i = 0; i &lt n; i++) {
+      switch(inputArr[i] &gt= 0){
+         case true:
+            posArr.push(inputArr[i]);
+            break;
+         case false:
+            negArr.push(inputArr[i]);
+            break;
+         default:
+            break;
+      }
+
+   }
+   return "Biggest negative number is: "+ negArr[negArr.length-1] + "&ltbr&gt"+"Smallest positive number is: " + posArr[0];
+}
+
+
+
+                  </pre>
+               </code>
+            </div>
+         </div>
+         <div class="content-window" id="tab-3">
+            <div class="text"> 
+               <form name="histogram-form" onsubmit=" return false">
+                  <input type="number" name="columns-amount" id="columns-amount" placeholder = "Amount of columns" min="4" max="25" required>
+                  <input type="submit" onclick="createHisto()">
+               </form>
+               <div class="histogram" id="histo">
+
+               </div>
+               <div class="code">
+                  <code>
+                     <pre>
+<b>JS</b>
+                        
+
+function createHisto(){
+   let histoField = document.getElementById("histo");
+   histoField.innerHTML = null;
+   let histoFieldHeight = histoField.offsetHeight;
+   let histoFieldWidth = histoField.offsetWidth;
+   let colNum = document.getElementById("columns-amount").value;
+   let array = createArray(colNum);
+   // array = selectionSort(array); 
+   if (colNum >= 4 && colNum &lt;= 25){
+      for(let i = 0; i &lt; array.length; i++)
+      {
+         array[i] = Math.abs(array[i]);
+         let column = document.createElement("div");
+         let p = document.createElement("p");
+         p.innerHTML= array[i];
+   
+         column.className = "column";
+         column.style.width = histoFieldWidth/array.length +'px';
+         column.style.height = histoFieldHeight/100 * array[i] + 'px';
+         histoField.appendChild(column);
+         column.appendChild(p);
+      }
+   
+
+   }
+
+}
+
+<b>CSS</b>
+
+.histogram
+            margin: 20px auto
+            width: 900px
+            height: 500px
+            border: 1px solid black
+            display: flex
+            align-items: flex-end
+            
+            .column
+               background-color: $highlighted-light
+               border: 1px solid black
+               display: flex
+               max-height: 500px
+               justify-content: center
+               align-items: center
+
+                     </pre>
+                  </code>
+               </div>
             </div>
          </div>
          <div class="content-window" id="drop-1">
             <div class="text">
-              <p>drop-1</p>
+               <img src="sources/img/Screenshot_1.png" alt="">
             </div>
          </div>
          <div class="content-window" id="drop-2">
             <div class="text">
-               <img src="sources/img/uml-diag.jpg" alt="">
+               <img src="sources/img/Screenshot_2.png" alt="">
             </div>
          </div>
          <div class="content-window" id="drop-3">
             <div class="text">
-               <img src="sources/img/file-strctr.jpg" alt="">
+               <img src="sources/img/Screenshot_3.png" alt="">
             </div>
          </div>
          <div class="content-window" id="drop-4">
             <div class="text">
-               <pre>static public Patient operator ++(Patient pat)
-		{
-			pat.Age++;
-			return pat;
-		}
-		</pre>
-		<img src="sources/img/unarniy.jpg" alt="">
+               <img src="sources/img/Screenshot_4.png" alt="">
             </div>
          </div>
-         <div class="content-window" id="drop-5">
-            <div class="text">
-               <pre>static public Cabinet operator ~(Cabinet cab)
-		{
-			cab.Status = !cab.Status;
-			return cab;
-		}
-		</pre>
-		<img src="sources/img/binary.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-6">
-            <div class="text">
-               <pre>// logichniy
-		static public Person operator ^(Person per1, Person per2)
-		{
-			return new Person(per1.Name, per1.Surname, per1.Age ^ per2.Age, per1.Birthday);
 
-		}
-// porivnyanya
-		static public bool operator <(MedicalStaff med1, MedicalStaff med2)
-		{
-			return med1.Cabinet < med2.Cabinet;
-		}
 
-// porivnyanya
-		static public bool operator >(MedicalStaff med1, MedicalStaff med2)
-		{
-			return med1.Cabinet > med2.Cabinet;
-		}
-		</pre>
-		<img src="sources/img/logichniy.jpg" alt="">
-		<img src="sources/img/porivniannia.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-7">
-            <div class="text">
-               <p class="download"> 
-                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a><br>
-	          Середовище розробки Visual Studio  
-               </p>
-            </div>
-         </div>
-	 <div class="content-window" id="drop-8">
-            <div class="text">
-                <img src="sources/img/prog.jpg" alt="">
-            </div>
-         </div>
-	 
-         
+
+
+
 
       </section>
    </div>
