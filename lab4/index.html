@@ -80,6 +80,87 @@
          </div>
          <div class="content-window" id="tab-2">
             <div class="text"> 
+               <b>Варіант 1</b> <br>
+               <img src="sources/img/arr1.png">
+            </div>
+            <div class="code">
+               <code>
+                  <pre>
+                     function getAnswer() {
+  var arrContainer = document.getElementById('array')
+    ,n           // кількість елементів масиву
+    ,max   = 2  // кількість перезапитів
+    ,att           // кількість спроб
+    ,num = ''   // кількість елементів
+    ,i          // індекс
+    ,greet = '' // повідомлення під час введення елементів
+    ,arr   = [] // масив
+  ;
+  num = 'Введіть кількість елементів';
+  n = prompt(num);
+  for(i=0; i<n; i++) {
+    for( att=0; att<max;) {
+      greet = 'Введіть число №'+(i+1); 
+      if(att++ > 0) greet += ' (Спроба '+att+' з '+max+')';
+      arr[i] = prompt( greet); // Створення масиву
+      if (null !== arr[i]  &&  arr[i].length) break;
+      if(att === max) {
+        alert("Завершено");
+        return false;
+      }
+    }
+  }
+  min = arr[0];
+  max = min;
+  for (i = 1; i < arr.length; ++i) {
+    if(i % 2 == 0){
+      if (arr[i] > max) max = arr[i];
+      var maxId = arr.indexOf(max);
+
+    }
+    if(i % 2 == 1){
+      if (arr[i] < min) min = arr[i];
+      var minId = arr.indexOf(min);
+    }   
+  }
+  function InsertionSort(arr)     
+{                              
+    var n = arr.length;
+    for (var i = 0; i < n; i++)
+     { var v = arr[ i ], j = i-1;
+       while (j >= 0 && arr[j] > v)
+        { arr[j+1] = arr[j]; j--; }
+       arr[j+1] = v;
+     }                    
+    return arr;   
+    
+}
+  function exchange(){
+    var array = arr;
+    var tmp = array[minId];
+    array[minId] = array[maxId];
+    array[maxId] = tmp;
+    document.write("Новий масив: [", array,"]");
+  }
+  
+  document.write("Масив: [", arr , "]");
+  document.write("<br>");
+  document.write("Максимальний елемент з парним індексом:" , max);
+  document.write("<br>");
+  document.write("Мінімальний елемент з непарним індексом:" , min);
+  document.write("<br>");
+  exchange();
+  document.write("<br>");
+  document.write(" Відсортований масив етодом вставки: [", InsertionSort(arr) , "]");
+  return arr;
+}
+
+  getAnswer();
+
+                </pre>
+               </code>
+            </div>
+            <div class="text"> 
                <b>Варіант 7</b> <br>
                <img src="sources/img/arr.png">
             </div>
@@ -186,6 +267,68 @@ function check(inputArr) {
             </div>
          </div>
          <div class="content-window" id="tab-3">
+            <div class="text">
+                <b>Варіант 1</b> <br>
+               <img src="sources/img/form1.png">
+               <img src="sources/img/form2.png">
+             </div>
+             <div class="code">
+                <code>
+                   <pre>
+                      function checkPass()
+{
+    var pass1 = document.getElementById('pass');
+    var pass2 = document.getElementById('passch');
+    var message = document.getElementById('info');
+    var button = document.getElementById('btn');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+   
+    if(pass1.value.length > 5)
+    {
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = ""
+        button.disabled = true;
+    }
+    else
+    {
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " Введіть 6 і більше символів"
+        return;
+        button.disabled = true;
+    }
+  
+    if(pass1.value == pass2.value)
+    {
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = ""
+        button.disabled = false;
+    }
+   else
+    {
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " Паролі не збігаються"
+        button.disabled = true;
+    }
+} 
+function banText() {
+    let banText = parseFloat(event.key);
+
+    if (isNaN(banText) ) {
+        event.preventDefault();
+    } else {
+        console.log(banText);
+    }
+}
+
+                   </pre>
+                </code>
+             </div>
             <div class="text"> 
                <form name="histogram-form" onsubmit=" return false">
                   <input type="number" name="columns-amount" id="columns-amount" placeholder = "Amount of columns" min="4" max="25" required>

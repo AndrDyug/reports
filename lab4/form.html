@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/regist_style.css">
+	<title>2 завдання 4 лабораторна</title>
+</head>
+<body>
+	<form> 
+	<label>Name:</label><input type="text" required><br> 
+<label>Date:</label><input type="date" id="date" name="date"/><br> 
+<label>Age:</label><input type="number" name="num" min="1" max="100" step="1" value="1" onkeypress="banText()"><br> 
+<label>Temp:</label><input type="number" name="t" value="35" min="35" max="42" step="0.1" pattern="^[ 0-9]+$"><br> 
+<label>Password:</label><input type="password" id="pass" required><br> 
+<label>Repeat password:</label><input type="password" id="passch" onKeyUp="checkPass()" required>
+<b style="color: red" id="info"></b><br> 
+<button id="btn">Send</button>
+</form>
+<script> 
+function checkPass()
+{
+    var pass1 = document.getElementById('pass');
+    var pass2 = document.getElementById('passch');
+    var message = document.getElementById('info');
+    var button = document.getElementById('btn');
+    var goodColor = "#66cc66";
+    var badColor = "#ff6666";
+
+ 	
+    if(pass1.value.length > 5)
+    {
+        pass1.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = ""
+        button.disabled = true;
+    }
+    else
+    {
+        pass1.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " Введіть 6 і більше символів"
+        return;
+        button.disabled = true;
+    }
+  
+    if(pass1.value == pass2.value)
+    {
+        pass2.style.backgroundColor = goodColor;
+        message.style.color = goodColor;
+        message.innerHTML = ""
+        button.disabled = false;
+    }
+	else
+    {
+        pass2.style.backgroundColor = badColor;
+        message.style.color = badColor;
+        message.innerHTML = " Паролі не збігаються"
+        button.disabled = true;
+    }
+} 
+function banText() {
+    let banText = parseFloat(event.key);
+
+    if (isNaN(banText) ) {
+        event.preventDefault();
+    } else {
+        console.log(banText);
+    }
+}
+
+</script> 
+</body>
+</html>
