@@ -313,7 +313,7 @@ section .content-window .text {
 }
 
 section .content-window .text img {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 20px 0;
 }
 
@@ -442,5 +442,8 @@ pre {
   -moz-tab-size: 2;
     -o-tab-size: 2;
        tab-size: 2;
+}
+xmp{
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */

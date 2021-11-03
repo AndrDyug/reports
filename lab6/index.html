@@ -19,9 +19,9 @@
       <header>
          <div class="container">
             <p class="title">Звіти з лабораторних робіт</p> <br>
-            <p class="title">з дисципліни «Основи розробки програмного забезпечення на платформі .NET»</p>
+            <p class="title">з дисципліни «Основи front-end та back-end розробок»</p>
             <br>
-            <p>Роботу виконали студенти групи <b>ІА-93</b></p>
+            <p>Роботу виконали студенти групи <b>ІА-93</b> Візняк Максим та Дюг Андрій</p>
          </div>
       </header>
       <nav>
@@ -38,41 +38,9 @@
       <section>
          <div class="menu">
             <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №6</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Динамічні елементи з бібліотеки Query</div>
+            <div class="menu-item" onclick="toggle('tab-3')">Вивід поточної дати та часу</div>
             <div class="menu-item" onclick="toggle('total')">Висновок</div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Проектування структури ПЗ</p>
-
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-1')" style="display: none;">Таблиця класів</div>
-                  <div class="drop-bar" onclick="toggle('drop-2')">UML-діагарма класів</div>
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Кодування ПЗ (програмування)</p>
-
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-3')">Класи-делегати</div>
-                  <div class="drop-bar" onclick="toggle('drop-4')">Події</div>
-                  <div class="drop-bar" onclick="toggle('drop-5')">Анонімні методи</div>
-                  <div class="drop-bar" onclick="toggle('drop-6')">Лямбда-оператори та Лямбда-вирази</div>	   
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Впровадження ПЗ</p>
-
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-7')">Папка з проектом</div>
-                  <div class="drop-bar" onclick="toggle('drop-8')">Запуск .exe файлу</div>
-               </div>
-            </div>
-
-            
          </div>
 
          <div class="content-window" id="start-window">
@@ -84,8 +52,10 @@
          <div class="content-window" id="total">
             <div class="text">
                <p>
-                  У даній лабораторній роботі, ми придбали практичні навички роботи  створення та використання  делегатів, подій, анонімних методи,  лямбда-операторів, лямбда-виразів.
-
+                  <b>Висновок</b>
+                  Виконуючи дану лабораторну роботу ми встановили емулятор веб-сервера та завантажили на нього HTML-документи.
+                  В результаті було встановлено веб-сервер XAMPP.
+                  Користуючись документацією бібліотеки jQueryui додали до сайту 3 динамічних елементи
                </p>
             </div>
          </div>
@@ -93,74 +63,238 @@
 
             <div class="text">
                <p> 
-                  <b>Тема та постановка задачі:</b> <br> <br>
+                  <b>Тема та мета роботи:</b> <br> <br>
       
-                  Тема: ДЕЛЕГАТИ. ПОДІЇ. АНОНІМНІ МЕТОДИ.  ЛЯМБДА-ОПЕРАТОРИ. ЛЯМБДА-ВИРАЗИ <br> <br>
-                  
-                  Мета: придбати практичні навички роботи  створення та використання  делегатів, анонімних методи,  лямбда-операторів, лямбда-виразів.
-                  <br> <br>
-                  
-                  Постановка задачі: <br> <br>
-      
-                  До програмного коду попередніх лабораторних робіт добавити та описати:<br>
-                  1.	класи-делегати (мінімум три делегата);<br>
-                  2.	події;<br>
-                  3.	анонімні методи;<br>
-                  4.	лямбда –оператори;<br>
-                  5.	лямбда –вирази;<br>
-                  6.	протестувати програму.<br>
-                  7.	зробити висновки.<br>
+                  Тема WEB-СЕРВЕРИ ТА ПРИНЦИПИ ЇХ РОБОТИ З КОРИСТУВАЧЕМ. 
+СЕРВЕРНІ WEB-ЗАСТОСУВАННЯ.
+ <br>
+Мета: придбати практичні навички встановлення та конфігурування WEB-сервера, встановлення та налаштування Apache
                   
          		</p>
             </div>
          </div>
-         <div class="content-window" id="drop-2">
+         <div class="content-window" id="tab-2">
             <div class="text">
-               <img src="sources/img/uml-diag.jpg" alt="">
+               <b>Динамічні елементи</b>
+               <xmp>
+                  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <script>
+  $( function() {
+    function runEffect() {
+      var selectedEffect = $( "#effectTypes" ).val();
+      var options = {};
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+      $( "#effect" ).toggle( selectedEffect, options, 500 );
+    };
+    $( "#button" ).on( "click", function() {
+      runEffect();
+    });
+  } );
+    $( function() {
+    var state = true;
+    $( "#button2" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect2" ).animate({
+          backgroundColor: "#0d2442",
+          color: "#ffffff",
+          width: 500,
+        }, 1000 );
+        $('.container2').animate({
+         width: 535
+        },500);
+      } else {
+        $( "#effect2" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+        $('.container2').animate({
+         width: 275
+        },1500);
+      }
+      state = !state;
+    });
+  });
+    $( function() {
+      var state = true;
+      $( "#button3" ).on( "click", function() {
+      if(state){
+         $( "#effect3" ).addClass( "newClass", 1000);
+         $('.container3').animate({
+         width: 285
+        },1500);
+      }
+      else{
+         $( "#effect3" ).removeClass( "newClass", 1500);
+         $('.container3').animate({
+         width: 275
+        },1500);
+      }
+      state = !state;
+    });
+  });
+  </script>
+  </script>
+</head>
+<body>
+   <div class="cont">
+<div class="container">
+<div class="toggler">
+  <div id="effect" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Toggle</h3>
+    <p>
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+    </p>
+  </div>
+</div>
+<select name="effects" id="effectTypes">
+  <option value="blind">Blind</option>
+  <option value="bounce">Bounce</option>
+  <option value="clip">Clip</option>
+  <option value="drop">Drop</option>
+  <option value="explode">Explode</option>
+  <option value="fade">Fade</option>
+  <option value="fold">Fold</option>
+  <option value="highlight">Highlight</option>
+  <option value="puff">Puff</option>
+  <option value="pulsate">Pulsate</option>
+  <option value="scale">Scale</option>
+  <option value="shake">Shake</option>
+  <option value="size">Size</option>
+  <option value="slide">Slide</option>
+</select>
+<button id="button" class="ui-state-default ui-corner-all">Run Effect</button>
+</div>
+<div class="container2">
+<div class="toggler2">
+  <div id="effect2" class="ui-widget-content ui-corner-all">
+    <h3 class="ui-widget-header ui-corner-all">Animate</h3>
+    <p>
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede. Nulla lorem metus, adipiscing ut, luctus sed, hendrerit vitae, mi.
+    </p>
+  </div>
+</div>
+ 
+<button id="button2" class="ui-state-default ui-corner-all">Toggle Effect</button>
+</div> 
+<div class="container3">
+   <div class="toggler3">
+  <div id="effect3" class="ui-corner-all">
+      Etiam libero neque, luctus a, eleifend nec, semper at, lorem. Sed pede.
+  </div>
+</div> 
+<button id="button3" class="ui-state-default ui-corner-all">Run Effect</button>
+</div>
+</div>
+</body>
+</html>
+               </xmp>
+               <p>CSS-властивості:</p>
+               <xmp>
+                  .toggler {
+    width: 500px;
+    height: 200px;
+    padding: 10px;
+
+  }
+  .container{
+   border: 1px solid black;
+   width: 275px;
+  }
+  .container2{
+   border: 1px solid black;
+   width: 275px;
+  }
+  .container3{
+   border: 1px solid black;
+   width: 275px;
+  }
+  .cont{
+   display: flex;
+  }
+  #button {
+    padding: .5em 1em;
+    text-decoration: none;
+  }
+  #effect {
+    position: relative;
+    width: 240px;
+    height: 170px;
+    padding: 0.4em;
+    border: 1px solid black;
+  }
+  #effect h3 {
+    margin: 0;
+    padding: 0.4em;
+    text-align: center;
+  }
+  #effectTypes{
+   margin-left: 10px;
+  }
+  .toggler2 { 
+    width: 500px;
+    height: 200px;
+    position: relative;
+    padding: 10px;
+  }
+   #button2 { 
+      padding: .5em 1em;
+      text-decoration: none;
+  }
+   #effect2 {
+   width: 240px;
+   height: 170px;
+   padding: 0.4em;
+   position: relative;
+   background: #fff;
+   border: 1px solid black;
+   }
+   #effect2 h3 {
+   margin: 0;
+   padding: 0.4em;
+   text-align: center;
+   }
+
+   .toggler3 { width: 500px; height: 200px; position: relative; padding: 10px; }
+   #button3 { padding: .5em 1em; text-decoration: none; }
+   #effect3 { width: 240px;  padding: 0.4em; border: 1px solid #000; background: #eee; color: #333; border: 1px solid black; }
+   .newClass { text-indent: 40px; letter-spacing: .4em; width: 410px; height: 120px; padding: 30px; margin: 10px; font-size: 1.1em; }
+               </xmp>
+               <b> Результат:</b>
+               <img src="sourses/img/anim1.png">
+               <img src="sourses/img/anim2.png">
             </div>
          </div>
-         <div class="content-window" id="drop-3">
+         <div class="content-window" id="tab-3">
             <div class="text">
-               Делегати
-               <img src="sources/img/delegate1.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-4">
-            <div class="text">
-               Події
-               <img src="sources/img/events.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-5">
-            <div class="text">
-               Анонімні методи
-               <img src="sources/img/anonim.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-6">
-            <div class="text">
-               Лямбда-оператори та Лямбда-вирази
-               <img src="sources/img/lambda1.jpg" alt="">
-               <img src="sources/img/lambda2.jpg" alt="">
-               <img src="sources/img/lambda3.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-7">
-            <div class="text">
-               <p class="download"> 
-                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a><br>
-	          Середовище розробки Visual Studio  
+               <p>
+                  <b>Виконання 9-го пункту завдання</b>
+                  <xmp>
+<!DOCTYPE html>
+<html>
+<head>
+   <title></title>
+</head>
+<body>
+   <h3>Інформацію отримано</h3>
+   <?php
+   echo "<p>Поточна дата та час:".date('d F Y,D - g:i:s A')."</p>";
+    ?>
+
+</body>
+</html>
+                  </xmp>
+                  <p>Результат:</p>
+                  <img src="sourses/img/date.png">
                </p>
             </div>
          </div>
-	 <div class="content-window" id="drop-8">
-            <div class="text">
-               <img src="sources/img/prog.jpg" alt="">
-               <a href="project/project.exe" download="">Завантажити Project.exe</a>
-            </div>
-         </div>
-	 
-         
 
       </section>
    </div>
