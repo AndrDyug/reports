@@ -78,68 +78,7 @@
   </style>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-  <script>
-  $( function() {
-    function runEffect() {
-      var selectedEffect = $( "#effectTypes" ).val();
-      var options = {};
-      if ( selectedEffect === "scale" ) {
-        options = { percent: 50 };
-      } else if ( selectedEffect === "size" ) {
-        options = { to: { width: 200, height: 60 } };
-      }
-      $( "#effect" ).toggle( selectedEffect, options, 500 );
-    };
-    $( "#button" ).on( "click", function() {
-      runEffect();
-    });
-  } );
-    $( function() {
-    var state = true;
-    $( "#button2" ).on( "click", function() {
-      if ( state ) {
-        $( "#effect2" ).animate({
-          backgroundColor: "#0d2442",
-          color: "#ffffff",
-          width: 500,
-        }, 1000 );
-        $('.container2').animate({
-        	width: 535
-        },500);
-      } else {
-        $( "#effect2" ).animate({
-          backgroundColor: "#fff",
-          color: "#000",
-          width: 240
-        }, 1000 );
-        $('.container2').animate({
-        	width: 275
-        },1500);
-      }
-      state = !state;
-    });
-  });
-    $( function() {
-    	var state = true;
-    	$( "#button3" ).on( "click", function() {
-    	if(state){
-    		$( "#effect3" ).addClass( "newClass", 1000);
-    		$('.container3').animate({
-        	width: 285
-        },1500);
-    	}
-    	else{
-        	$( "#effect3" ).removeClass( "newClass", 1500);
-        	$('.container3').animate({
-        	width: 275
-        },1500);
-    	}
-    	state = !state;
-    });
-  });
-  </script>
-  </script>
+  </style>
 </head>
 <body>
 	<div class="cont">
@@ -191,5 +130,65 @@
 <button id="button3" class="ui-state-default ui-corner-all">Run Effect</button>
 </div>
 </div>
+<script>
+  $( function() {
+    function runEffect() {
+      var selectedEffect = $( "#effectTypes" ).val();
+      var options = {};
+      if ( selectedEffect === "scale" ) {
+        options = { percent: 50 };
+      } else if ( selectedEffect === "size" ) {
+        options = { to: { width: 200, height: 60 } };
+      }
+      $( "#effect" ).toggle( selectedEffect, options, 500 );
+    };
+    $( "#button" ).on( "click", function() {
+      runEffect();
+    });
+  } );
+    $( function() {
+    var state = true;
+    $( "#button2" ).on( "click", function() {
+      if ( state ) {
+        $( "#effect2" ).animate({
+          backgroundColor: "#0d2442",
+          color: "#ffffff",
+          width: 500,
+        }, 1000 );
+        $('.container2').animate({
+          width: 535
+        },500);
+      } else {
+        $( "#effect2" ).animate({
+          backgroundColor: "#fff",
+          color: "#000",
+          width: 240
+        }, 1000 );
+        $('.container2').animate({
+          width: 275
+        },1500);
+      }
+      state = !state;
+    });
+  });
+    $( function() {
+      var state = true;
+      $( "#button3" ).on( "click", function() {
+      if(state){
+        $( "#effect3" ).addClass( "newClass", 1000);
+        $('.container3').animate({
+          width: 285
+        },1500);
+      }
+      else{
+          $( "#effect3" ).removeClass( "newClass", 1500);
+          $('.container3').animate({
+          width: 275
+        },1500);
+      }
+      state = !state;
+    });
+  });
+  </script>
 </body>
 </html>
