@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <script src="scripts/script.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   
+   <script src='scripts/main.js'></script>  <!--jQuery-->
+
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+   <title>Report-page</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header>
+         <div class="container">
+            <p class="title">Звіти з лабораторних робіт</p> <br>
+            <p class="title">з дисципліни «Основи розробки програмного front-end та backend застосувань»</p>
+            <br>
+            <p>Роботу виконали студенти групи <b>ІА-93</b></p>
+         </div>
+      </header>
+      <nav>
+         <div class="nav-element"><a href="../lab1/index.html">Лабораторна 1</a></div>
+         <div class="nav-element"><a href="../lab2/index.html">Лабораторна 2</a></div>
+         <div class="nav-element"><a href="../lab3/index.html">Лабораторна 3</a></div>
+         <div class="nav-element"><a href="../lab4/index.html">Лабораторна 4</a></div>
+	      <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
+         <div class="nav-element"><a href="../lab6/index.html">Лабораторна 6</a></div>
+         <div class="nav-element"><a href="../lab7/index.html">Лабораторна 7</a></div>
+         <div class="nav-element"><a href="../lab8/index.html">Лабораторна 8</a></div>
+         <div class="nav-element"><a href="../lab9/index.html">Лабораторна 9</a></div>
+      </nav>
+      <section>
+         <div class="menu">
+            <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №8</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Інфологічна модель проекту</div>
+            <div class="menu-item" onclick="toggle('tab-3')">Даталогічна модель проекту</div>
+            <div class="menu-item" onclick="toggle('tab-4')">Реалізація БД</div>
+            <div class="menu-item" onclick="toggle('tab-5')">Внесення даних до БД</div>
+            <div class="menu-item" onclick="toggle('tab-6')">Авторизація</div>
+            <div class="menu-item" onclick="toggle('tab-7')">Вибір мови</div>
+            <div class="menu-item" onclick="toggle('total')">Висновок</div>
+         </div>
+
+         <div class="content-window" id="start-window">
+               <p>Start<!--Here write any code you want to show as a report--></p>
+         </div>
+
+
+         
+         <div class="content-window" id="total">
+            <div class="text">
+               <p>
+                  У даній лабораторній роботі ми придбали практичні навички роботи взаємодії WEB- застосувань з СКБД, використання сесій і cookies  в сценаріях авторизації, розробки сценаріїв обробки даних з файлів.
+
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-1">
+            <div class="text">
+               <p> 
+                  Тема: ІНТЕРФЕЙСИ ВЗАЄМОДІЇ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗ ДАНИХ (СКБД). SQL-ЗАПИТИ У PHP-СЦЕНАРІЯХ. ІНТЕРФЕЙСИ WEB-ЗАСТОСУВАНЬ з СКБД. ВИКОРИСТАННЯ СЕСІЙ І COOKIES  В СЦЕНАРІЯХ АВТОРИЗАЦІЇ. РОЗРОБКА СЦЕНАРІЇВ ОБРОБКИ ДАНИХ З ФАЙЛІВ.
+<br>
+Мета: придбати практичні навички роботи взаємодії WEB- застосувань з СКБД, використання сесій і cookies  в сценаріях авторизації, розробки сценаріїв обробки даних з файлів.
+
+         		</p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-2">
+            <div class="text">
+               <p> 
+               У базі даних буде присутня одна таблиця, в яка буде слугувати для збереження аккаунтів користувачів.
+               Відповідно до вимог, ця таблиця буде містити наступні атрибути: ID(для ідентифікування користувача), name(характеристичний атрибут), surname(характеристичний атрибут), email(характеристичний атрибут, буде використовуватись для авторзації користувача), password(характеристичний атрибут, буде використовуватись для авторзації користувача). 
+                  <img src="sources/img/2.png">
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-3">
+            <div class="text">
+               <p>  
+                  <br>
+                  У таблиці присутня нормалізація 1, 2 та 3 форм, тому таблицю можна переводити до даталогічної моделі.
+                  <br>
+                  <img src="sources/img/1.png">
+                     
+                  </p>
+               </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-4">
+            <div class="text">
+               <p> 
+               <img src="sources/img/3.png">
+               <img src="sources/img/4.png">
+                </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-5">
+            <div class="text">
+               <p>
+                  Програмний код форми:
+                  <xmp>
+                    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="client.css">
+    <title>Форма реєстрації клієнтів</title>
+  </head>
+<form action="actions/register.php" method="POST" > 
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="surname" name="surname" placeholder="Surname" required>
+            </div>
+            <div class="form-group">
+               <input type="email" class="form-control" id="email" name="email" placeholder="Email" required >
+            </div>
+             <div class="form-group">
+               <input type="password" class="form-control" id="pass_register" name="pass" placeholder="Password" required>
+             </div>
+            
+            
+             <input type="submit" class="btn btn-success" name="submit" value="Sign Up"></input>
+            <br>
+          </form>
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
+                  </xmp>
+                  <br>
+                  Програмний код обробника:
+                  <xmp>
+                  <?php
+
+$name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
+$surname = filter_var(trim($_POST['surname']), FILTER_SANITIZE_STRING);
+$mail = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
+$pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);
+
+
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name ='KPIzza';
+$mysql = new mysqli($db_host,$db_user, $db_pass, $db_name);
+$result = $mysql->query("SELECT * FROM `users` WHERE `email`= '$email'");
+$user = mysqli_fetch_all($result,1);
+if(count($user) != 0){
+   $mysql->close();
+   header('Location: /');
+   exit();
+}
+
+$mysql->query("INSERT INTO `users` (`mail`, `pass`) 
+VALUES ('$email', '$pass')");
+$mysql->close();
+$mysql = new mysqli($db_host,$db_user, $db_pass, $db_name);
+$result = $mysql->query("SELECT * FROM `users` WHERE `mail`= '$email'");
+$userId = mysqli_fetch_all($result,1);
+$userId = $userId['0']; // відкриваємо перший рядок у масиві
+$userId = $userId['id']; 
+
+$mysql->query("INSERT INTO `users` (`name`, `surname`, `mail`, `pass`) 
+VALUES ('$name', '$surname', '$email', '$pass')");
+$mysql->close();
+header('Location: /');
+?>
+</xmp>
+Результат:
+<img src="sources/img/5.png">
+<img src="sources/img/6.png">
+
+
+                  </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-7">
+            <div class="text">
+              <img src="sources/img/lang1.png">
+              <img src="sources/img/lang2.png">
+            </div>
+         </div>
+         <div class="content-window" id="tab-6">
+            <div class="text">
+              Програмний код форми:
+              <xmp>
+                <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="client.css">
+    <title>Форма реєстрації клієнтів</title>
+  </head>
+<a href="client.php">Створити аккаунт</a>
+<form action="actions/auth.php" method="POST" > 
+            <div class="form-group">
+               <input type="email" class="form-control" id="email" name="email" placeholder="Email" required >
+            </div>
+             <div class="form-group">
+               <input type="password" class="form-control" id="pass_register" name="pass" placeholder="Password" required>
+             </div>
+            
+            
+             <input type="submit" class="btn btn-success" name="submit" value="Sign in"></input>
+            <br>
+          </form>
+
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
+              </xmp>
+              <br>
+              Програмний код php-файлу:
+              <xmp>
+                <?php
+
+$login = filter_var(trim($_POST['email']), FILTER_SANITIZE_STRING);
+$pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);
+
+
+
+
+$db_host = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name ='KPIzza';
+$mysql = new mysqli($db_host,$db_user, $db_pass, $db_name);
+$result = $mysql->query("SELECT * FROM `users` WHERE `mail`= '$login' AND `pass`= '$pass'");
+$user = mysqli_fetch_all($result,1);
+if(count($user) == 0){
+   echo "user not found";
+   $mysql->close();
+   exit();
+}
+$user = $user['0']; // відкриваємо перший рядок у масиві
+
+setcookie('user', $user['id'], time() + 3600, "/");
+$mysql->close();
+
+
+header('Location: /');
+?>
+              </xmp>
+              <br>
+              Результат:
+              <img src="sources/img/7.png">
+
+            </div>
+         </div>
+
+         
+
+      </section>
+   </div>
+   <footer>
+      <div><a href="../index.html">2021 рік</a></div>
+   </footer>
+</body>
+
+</html>

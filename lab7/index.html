@@ -19,7 +19,7 @@
       <header>
          <div class="container">
             <p class="title">Звіти з лабораторних робіт</p> <br>
-            <p class="title">з дисципліни «Основи розробки програмного забезпечення на платформі .NET»</p>
+            <p class="title">з дисципліни «Основи розробки програмного front-end та backend застосувань»</p>
             <br>
             <p>Роботу виконали студенти групи <b>ІА-93</b></p>
          </div>
@@ -32,45 +32,18 @@
 	      <div class="nav-element"><a href="../lab5/index.html">Лабораторна 5</a></div>
          <div class="nav-element"><a href="../lab6/index.html">Лабораторна 6</a></div>
          <div class="nav-element"><a href="../lab7/index.html">Лабораторна 7</a></div>
-         <div class="nav-element hidden"><a href="../lab8/index.html">Лабораторна 8</a></div>
-         <div class="nav-element hidden"><a href="../lab9/index.html">Лабораторна 9</a></div>
+         <div class="nav-element"><a href="../lab8/index.html">Лабораторна 8</a></div>
+         <div class="nav-element"><a href="../lab9/index.html">Лабораторна 9</a></div>
       </nav>
       <section>
          <div class="menu">
             <div class="menu-item" onclick="toggle('tab-1')">Постановка задачі Лабораторної №7</div>
+            <div class="menu-item" onclick="toggle('tab-2')">Опис об'єктів які будуть в БД</div>
+            <div class="menu-item" onclick="toggle('tab-3')">Інфологічна модель. Опис моделі</div>
+            <div class="menu-item" onclick="toggle('tab-4')">Даталогічна модель.Зв'язки між таблицями</div>
+            <div class="menu-item" onclick="toggle('tab-5')">Реалізація БД в СУБД MySQL phpMyAdmin</div>
+            <div class="menu-item" onclick="toggle('tab-6')">Введення виведення даних із БД, пошук даних в БД</div>
             <div class="menu-item" onclick="toggle('total')">Висновок</div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Проектування структури ПЗ</p>
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-1')" style="display: none;">Таблиця класів</div>
-                  <div class="drop-bar" onclick="toggle('drop-2')">UML-діагарма класів</div>
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Кодування ПЗ (програмування)</p>
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-3')">Виключення при некоректній авторизації</div>
-                  <div class="drop-bar" onclick="toggle('drop-4')">Фільтри виключень</div>
-                  <div class="drop-bar" onclick="toggle('drop-5')">Виключення при обробці масивів</div>
-		            <div class="drop-bar" onclick="toggle('drop-6')">Системні виключення</div>
-                  <div class="drop-bar" onclick="toggle('drop-9')">Власні виключення</div>	  
-               </div>
-            </div>
-            <div class="drop-out">
-               <div class="drop-down">
-                  <p>Впровадження ПЗ</p>
-               </div>
-               <div class="container">
-                  <div class="drop-bar" onclick="toggle('drop-7')">Папка з проектом</div>
-                  <div class="drop-bar" onclick="toggle('drop-8')">Запуск .exe файлу</div>
-               </div>
-            </div>
-
-            
          </div>
 
          <div class="content-window" id="start-window">
@@ -82,92 +55,197 @@
          <div class="content-window" id="total">
             <div class="text">
                <p>
-                  У даній лабораторній роботі, ми придбали практичні навички роботи з виключними ситуаціями, які виникають при роботі програми.
+                  У даній лабораторній роботі ми придбали практичні навички підключення до СКБД, вибора бази даних, виконання запиту, отримання результатів, відключення від СКБД.
 
                </p>
             </div>
          </div>
          <div class="content-window" id="tab-1">
-
             <div class="text">
                <p> 
-                  <b>Тема та постановка задачі:</b> <br> <br>
-      
-                  Тема: ВИКЛЮЧНІ СИТУАЦІЇ <br> <br>
-                  
-                  Мета: придбати практичні навички роботи з виключними ситуаціями, які виникають при роботі програми.
+                  Тема: ВЗАЄМОДІЯ WEB-ЗАСТОСУВАНЬ З СИСТЕМОЮ КЕРУВАННЯ БАЗАМИ ДАНИХ (СКБД). ОБРОБКА РЕЗУЛЬТАТІВ SQL-ЗАПИТІВ У PHP-СЦЕНАРІЇ.
+<br>
+Мета: придбати практичні навички підключення до СКБД, вибора бази даних, виконання запиту, отримання результатів, відключення від СКБД
 
-                  <br> <br>
-                  
-                  Постановка задачі: <br> <br>
-      
-                  До програмного коду попередніх лабораторних робіт добавити та описати;<br>
-
-                  1.	виключення, яке можуть виникати при некоректній авторизації;<br>
-                  2.	 виключення, з застосуванням фільтрів виключення;<br>
-                  3.	виключення, які виникають при обробці масивів ;<br>
-                  4.	системні виключення;<br>
-                  5.	власні виключення;<br>
-                  6.	протестувати програму. <br>
-                  7.	Зробити висновки.
-                  
          		</p>
             </div>
          </div>
-         <div class="content-window" id="drop-2">
+         <div class="content-window" id="tab-2">
             <div class="text">
-               <img src="sources/img/uml-diag.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-3">
-            <div class="text">
-               Виключення при некоректній авторизації
-               <img src="sources/img/custom_expt_code.jpg" alt="">
-               <img src="sources/img/custom_expt_code2.jpg" alt="">    
-            </div>
-         </div>
-         <div class="content-window" id="drop-4">
-            <div class="text">
-               Фільтри виключень
-               <img src="sources/img/filter_expt_code.jpg" alt="">
-               <img src="sources/img/filter_expt_output1.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-5">
-            <div class="text">
-               <img src="sources/img/arr_expt_code.jpg" alt="">
-               <img src="sources/img/arr_expt_output.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-6">
-            <div class="text">
-               Системні виключення 
-               <img src="sources/img/system_expt_code.jpg" alt="">
-               <img src="sources/img/system_expt_output1.jpg" alt="">
-            </div>
-         </div>
-         <div class="content-window" id="drop-9">
-            <div class="text">
-               <img src="sources/img/custom_expt_code.jpg" alt="">
-               <img src="sources/img/custom_expt_code2.jpg" alt="">    
-               <img src="sources/img/custom_expt_output.jpg" alt="">           
-            </div>
-         </div>
-         <div class="content-window" id="drop-7">
-            <div class="text">
-               <p class="download"> 
-                  <a href="https://github.com/FeltMe/ZooClinic" target="blink">Посилання на Github з проектом</a><br>
-	          Середовище розробки Visual Studio  
+               <p>  
+                  <img src="sources/img/1.png">
+                  <br>
+                  Так, як основною сутністю в БД для телефонного довідника є номер телефону,то було вирішено обрати саме такі атрибути, які би могли надати інформацію про власника за допомогою номеру телефону.
                </p>
             </div>
          </div>
-	 <div class="content-window" id="drop-8">
+         <div class="content-window" id="tab-3">
             <div class="text">
-               <img src="sources/img/prog.jpg" alt="">
-               <a href="project/project.exe" download="">Завантажити Project.exe</a>
+               <p>  
+                  <br>
+                  Інфологічна модель:
+                  <p>При описі інфологічної моделі необхідно особливо звернути увагу, чи наявні атрибути, що змогли б повністю ідентифікувати конкретний екземпляр сутності, як наприклад, унікальний ідентифікатор. У нашому випадку атрибути такої властивості не мають тому вводимо додатковий id («Ідентифікатор»)
+                     <br>
+                     <img src="sources/img/2.png">
+                  </p>
+               </p>
             </div>
          </div>
-	 
+         <div class="content-window" id="tab-4">
+            <div class="text">
+               <p> 
+               При переході до даталогічної моделі виникають проблеми, оскільки атрибут Номер телефону несе в собі транзитивну властивість.Тому створимо окрему таблицю "Номери телефону" з атрибутами ID та Номер телефону(phone_number), і будемо посилатись на цю таблицю із таблиці Телефонний довідник за допомогою атрибуту phone_number_id. 
+                  <br>
+                  <img src="sources/img/3.png">
+                  </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-5">
+            <div class="text">
+               <p>
+                  <br>
+                  <img src="sources/img/4.png">
+                  <img src="sources/img/5.png">
+                  <img src="sources/img/6.png">
+                  </p>
+            </div>
+         </div>
+         <div class="content-window" id="tab-6">
+            <div class="text">
+               <p>
+                  <br>
+                  Внесення та вибірка елементів із БД:
+                  <xmp>
+                     <?php
+    // подключаемся к серверу
+    if (isset($_POST['fname'])) {
+
+    $link = mysqli_connect("localhost", "root", "", "phone_directory") 
+        or die("Ошибка " . mysqli_error($link)); 
+     
+    // экранирования символов для mysql
+    $name = htmlentities(mysqli_real_escape_string($link, $_POST['fname']));
+    $surname = htmlentities(mysqli_real_escape_string($link, $_POST['lname']));
+    $address = htmlentities(mysqli_real_escape_string($link, $_POST['address']));
+    $phone = htmlentities(mysqli_real_escape_string($link, $_POST['phone']));
+     
+    // создание строки запроc
+    $query = "INSERT INTO abonent VALUES(null, '$name','$surname', '$address', '$phone')";
+    $query1 = "SELECT * FROM `abonent`";
+     
+    // выполняем запрос
+    $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link)); 
+   
+    if($result)
+    {
+        echo "<span style='color:green;'>Данні додано</span>";
+    }
+    $result1 = mysqli_query($link, $query1);
+
+
+    // закрываем подключение
+    mysqli_close($link);
+}
+?>
+<h2>Добавити новий запис</h2>
+<form method="POST">
+<p>Введіть ім'я<br> 
+<input type="text" name="fname" /></p>
+<p>Введіть прізвище<br> 
+<input type="text" name="lname" /></p>
+<p>Введіть адресу<br>
+<input name="address"></p>
+<p>Введіть номер телефону<br>
+<input type="number" name="phone"></p>
+<input type="submit" value="Send"/>
+</form>
+<table>
+<tr>
+    <td>ID</td>
+    <td>Surname</td>
+    <td>Name</td>
+    <td>Address</td>
+    <td>Phone</td>
+</tr>
+    <?php 
+    while($row = mysqli_fetch_array($result1)){   //Creates a loop to loop through results
+echo "<tr><td>" . $row['ID'] . "</td><td>" . $row['name'] . "</td><td>" . $row['surname'] . "</td><td>" . $row['address'] . "</td> <td>" . $row['phone_number'] . "</td></tr>"; 
+}
+    ?>
+</table>
+<button ><a href="delete.php">Delete</a></button>
+
+                  </xmp>
+                  <br>
+                  Видалення елементів із БД:
+                  <xmp>
+                     <form method="POST" >
+<h2>Видалити запис</h2>
+<p>Введіть id<br>
+<input name="id"></p>
+<input type="submit" value="send">
+<?php
+if(isset($_POST["id"]))
+{
+    $conn = mysqli_connect("localhost", "root", "", "phone_directory");
+    if (!$conn) {
+      die("Помилка: " . mysqli_connect_error());
+    }
+    $query1 = "SELECT * FROM `abonent`";
+ $result1 = mysqli_query($conn, $query1);
+
+    $userid = mysqli_real_escape_string($conn, $_POST["id"]);
+    $sql = "DELETE FROM abonent WHERE ID = '$userid'";
+    if(mysqli_query($conn, $sql)){
+         ?>
+        </form>
+<table>
+<tr>
+    <td>ID</td>
+    <td>Surname</td>
+    <td>Name</td>
+    <td>Address</td>
+    <td>Phone</td>
+</tr>
+    <?php 
+    while($row = mysqli_fetch_array($result1)){   //Creates a loop to loop through results
+echo "<tr><td>" . $row['ID'] . "</td><td>" . $row['name'] . "</td><td>" . $row['surname'] . "</td><td>" . $row['address'] . "</td> <td>" . $row['phone_number'] . "</td></tr>"; 
+}
+    ?>
+</table>
+<?php
+    } else{
+        echo "Ошибка: " . mysqli_error($conn);
+    }
+    mysqli_close($conn);    
+}
+?>
+</form>
+
+                  </xmp>
+                  <br>
+                  <p>Внесення даних в БД</p>
+                  <img src="sources/img/7.png">
+   <br>
+   <p>Результат внесення на сторінці</p>
+   <img src="sources/img/8.png">
+   <br>
+   <p>Результат внесення в phpMyAdmin</p>
+   <img src="sources/img/9.png">
+   <br>
+   <p>Видалення даних з БД</p>
+   <img src="sources/img/10.png">
+   <br>
+   <p>Результат видалення на сторінці</p>
+   <img src="sources/img/11.png">
+   <br>
+   <p>Результат видалення з phpMyAdmin</p>
+   <img src="sources/img/12.png">
+                  </p>
+            </div>
+         </div>
+         <br>
+
          
 
       </section>
